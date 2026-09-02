@@ -1,0 +1,156 @@
+/* ========================================
+   CSS Reset e Variáveis Globais
+   ======================================== */
+/* Remove margins e paddings padrão de todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Define fonte padrão do sistema operacional */
+  font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "SF Pro Display",
+          sans-serif;
+} 
+    
+/* ========================================
+   Estilos do Body
+   ======================================== */
+body {
+  /* Gradiente diagonal de roxo (#bb086e) para laranja (#d86e16) */
+  background: linear-gradient(135deg, #bb086e 0%, #d86e16 100%);
+  min-height: 100vh; /* Altura mínima 100% da viewport */
+  /* Centraliza o conteúdo tanto vertical quanto horizontalmente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Espaçamento em todos os lados */
+  color: #ffffff; /* Texto branco */
+}
+
+/* ========================================
+   Container Principal
+   ======================================== */
+.container {
+  width: 100%; /* Ocupa toda a largura disponível */
+  max-width: 480px; /* Limita a largura máxima para melhor UX em telas grandes */
+  text-align: center; /* Alinha texto ao centro */
+  padding: 30px 20px; /* Espaçamento interno: 30px vertical, 20px horizontal */
+}
+
+/* ========================================
+   Seção de Perfil do Usuário
+   ======================================== */
+.profile {
+  margin-bottom: 30px; /* Espaço abaixo do perfil */
+}
+
+/* Imagem de perfil circular */
+.profile-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%; /* Cria círculo */
+  object-fit: cover; /* Recorta a imagem para preencher o espaço */
+  border: 3px solid #ffffff; /* Borda branca ao redor */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  margin-bottom: 15px; /* Espaço abaixo da imagem */
+}
+
+/* Título do perfil */
+.profile h1 {
+  font-size: 1.4rem; /* Tamanho grande para destaque */
+  font-weight: 700; /* Texto em negrito */
+  margin-bottom: 5px; /* Pequeno espaço abaixo */
+}
+
+/* Descrição/bio */
+.profile p {
+  font-size: 0.95rem;
+  opacity: 0.9; 
+  font-weight: 400;
+}
+
+/* ========================================
+   Lista de Links
+   ======================================== */
+.links {
+  /* Layout flexível vertical (um link abaixo do outro) */
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Espaço entre cada link */
+  margin-bottom: 35px; /* Espaço abaixo de toda a lista */
+}
+
+/* ========================================
+   Cartão/Botão de Link Individual
+   ======================================== */
+.link-card {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  position: relative; 
+  /* Fundo semitransparente branco com efeito de vidro */
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px); /* Efeito blur no fundo */
+  -webkit-backdrop-filter: blur(10px); /* Efeito blur para Safari */
+  color: #ffffff;
+  text-decoration: none; /* Remove sublinhado padrão de links */
+  padding: 16px 20px; /* Espaçamento interno do botão */
+  border-radius: 50px; /* Bordas arredondadas (pill-shaped) */
+  font-weight: 600; /* Texto em negrito */
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borda fina branca semitransparente */
+  transition: all 0.3s ease; /* Transição suave para todos os efeitos */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Ícone dentro do botão de link */
+.link-card i {
+  position: absolute; /* Posiciona independentemente */
+  left: 20px; /* A 20px da esquerda */
+  font-size: 1.3rem; /* Ícone um pouco maior que o texto */
+}
+
+/* ========================================
+   Efeito de Hover nos Botões de Link
+   ======================================== */
+.link-card:hover {
+  background-color: #ffffff; /* Fundo fica branco sólido */
+  color: #130cb7; /* Texto muda para azul escuro */
+  transform: translateY(-3px); /* Sobe 3 pixels (efeito de "elevação") */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+}
+
+/* ========================================
+   Ícones de Redes Sociais no Rodapé
+   ======================================== */
+.social-icons {
+  display: flex;
+  justify-content: center; /* Centra os ícones horizontalmente */
+  gap: 20px; /* Espaço entre cada ícone */
+}
+
+/* Links dos ícones de redes sociais */
+.social-icons a {
+  color: #ffffff;
+  font-size: 1.5rem; /* Ícones maiores */
+  /* Transições suaves para transform e opacity */
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+  opacity: 0.85; /* Levemente transparente inicialmente */
+}
+
+/* Efeito ao passar o mouse nos ícones sociais */
+.social-icons a:hover {
+  opacity: 1; /* Fica completamente opaco */
+  transform: scale(1.2); /* Aumenta 20% de tamanho */
+}
+
+/* ========================================
+   Rodapé / Créditos
+   ======================================== */
+footer {
+  margin-top: 30px; /* Espaço acima do rodapé */
+  font-size: 0.8rem; /* Texto pequeno */
+  opacity: 0.7; /* Texto discreto, pouco transparente */
+}
